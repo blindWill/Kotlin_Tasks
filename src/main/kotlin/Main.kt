@@ -38,7 +38,7 @@ fun main() {
 }
 
 fun ageDescription(age: Int): String{
-    return if (age in 11..14){
+    return if (age % 100 in 11..14){
         "$age лет"
     }else{
          when (age % 10) {
@@ -74,7 +74,7 @@ fun brickPasses(a: Int, b: Int, c: Int, r: Int, s: Int): Boolean{
 }
 
 fun sin(x: Double, eps: Double): Double{
-    var current: BigDecimal = x.toBigDecimal()
+    var current = x.toBigDecimal()
     var result = 0.toBigDecimal()
     var sign = 1
     var temp = 1.toBigDecimal()
