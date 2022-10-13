@@ -122,12 +122,10 @@ fun roman(n: Int): String{
                     10 to "X", 9 to "IX", 5 to "V", 4 to "IV", 1 to "I")
     var number = n
     var result = ""
-    while (number > 0){
-        map.forEach { (digit, romanDigit) ->
-            while (number >= digit){
-                result += romanDigit
-                number -= digit
-            }
+    map.forEach { (digit, romanDigit) ->
+        while (number >= digit){
+            result += romanDigit
+            number -= digit
         }
     }
     return result
